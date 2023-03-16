@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .full-body{
+            background-color: rgb(240, 233, 221);
+        }
+        .style{
+            background-color: #fff;
+            border: 5px solid white;
+            border-radius: 3px;
+        }
+        span{
+            font-size: 17px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+<section class="full-body pt-4 pb-5">
+    
+    <div class="container">
+        <div class="d-flex justify-content-end">
+
+            <a class="btn btn-success mb-4" href="index.html">Go Quiz Hero</a>
+        </div>
+        <div class="style">
+            <h4>1: What is the difference between map and filter and foreach and find?</h4>
+            <p><span>Answer:</span> map and filter are higher-order functions used to manipulate collections in functional programming. map applies a function to each element in a collection and returns a new collection of the same size with the transformed values, while filter returns a new collection containing only the elements that satisfy a given predicate.
+
+                forEach is a method used to iterate over the elements of a collection and perform a specified action on each element, but it does not return anything. find is also a method used to iterate over the elements of a collection, but it returns the first element that satisfies a given predicate, or null if no element satisfies the predicate.</p>
+        </div> <br>
+        <div class="style">
+            <h4>2: What is the difference between local storage and session storage and cookies?</h4>
+            <p><span>Answer:</span> Local storage and session storage are both mechanisms for storing data on the client-side in a user's browser, but they differ in terms of their lifespan and scope. Local storage persists even after the browser is closed and is available to all pages in the same origin, while session storage is only available for the duration of the current session and is limited to the current window or tab. Cookies are also used to store data on the client-side, but they have additional features like expiration dates and can be used for tracking and authentication purposes.</p>
+        </div><br>
+        <div class="style">
+            <h4>3: What is Event lopp and how does is work?</h4>
+            <p><span>Answer:</span> An event loop is a programming pattern that enables the handling of asynchronous events in a non-blocking way. It works by continuously checking for events in a queue and executing any associated callbacks or event handlers. This allows the program to perform other tasks while waiting for events to occur. Event loops are commonly used in languages like JavaScript, Python, and Node.js, for web applications and other event-driven systems.</p>
+        </div><br>
+
+        <div class="style">
+            <h4>4: What is the function of quizTimer and how does work?</h4>
+            <p><span>Answer:</span> The quizTimer function is used to start a countdown timer for a quiz or any timed activity. It takes a single argument dismiss, which is a boolean value. If dismiss is true, the function clears the interval of the timer and stops the countdown.
+
+                The function uses setInterval method to call a callback function every second. The callback function updates the HTML of an element with the ID count, which displays the remaining time in minutes and seconds format. It also updates the count variable, which holds the current count of seconds.
+                
+                When the count of seconds exceeds 60, the function alternates between adding and removing CSS classes text-red-300 and text-red-700, which change the color of the displayed time to red, creating a visual effect.
+                
+                Overall, the quizTimer function provides a way to start and stop a countdown timer for a quiz or other timed activity, updating the displayed time every second and adding a visual effect when the time is up.</p>
+        </div><br>
+
+        <div class="style">
+            <h4>5: What is work in chooseQuiz function?</h4>
+            <p><span>Answer:</span> chooseQuiz function, the code is checking if an object with an id property matching the current quiz's id already exists in the answers array using the find method.
+
+                The find method iterates through the array and returns the first element that satisfies the provided condition (in this case, an object with an id property matching the current quiz's id).
+                
+                If an object with the same id is found in the answers array, the code then enters the if block on the fifth line, where it searches for the index of the existing object in the answers array using a for...of loop.
+                
+                Once the index is found, the code then replaces the existing object with a new object created by spreading the properties of the current quiz object and adding a givenAns property with the value passed in the chooseQuiz function.
+                
+                If no object with the same id is found in the answers array, the code enters the else block on the eighth line, where it creates a new object with the properties of the current quiz object and a givenAns property with the value passed in the chooseQuiz function, and pushes this new object to the answers array.
+                
+                Finally, the displayAnswers function is called with the updated answers array as an argument to display the updated list of answers.</p>
+        </div>
+    </div>
+</section>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
